@@ -170,7 +170,7 @@ st.sidebar.markdown(
 st.markdown(
     """
     <div class="dashboard-header">
-        <h1>🔍 Online Food Delivery Analysis Dashboard</h1>
+        <h1>🛵 Online Food Delivery Analysis Dashboard</h1>
         <p>End-to-end view of orders, revenue, delivery performance and customer satisfaction</p>
     </div>
     """,
