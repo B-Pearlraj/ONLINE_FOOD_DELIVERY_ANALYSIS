@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 # ---------------------------------------------------------------------------
 st.set_page_config(
     page_title="Online Food Delivery Dashboard",
-    page_icon="🍔",
+    page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -128,7 +128,7 @@ def has_col(col: str) -> bool:
 # ---------------------------------------------------------------------------
 # SIDEBAR FILTERS
 # ---------------------------------------------------------------------------
-st.sidebar.markdown("## 🍔 Filters")
+st.sidebar.markdown("## 🔍 Filters")
 filtered_df = fddc_df.copy()
 
 if has_col("Order_Status"):
@@ -158,7 +158,11 @@ st.sidebar.caption(f"Showing **{len(filtered_df):,}** of **{len(fddc_df):,}** or
 if filtered_df.empty:
     st.warning("No data matches the selected filters. Adjust filters in the sidebar.")
     st.stop()
-
+st.sidebar.markdown("---")
+st.sidebar.markdown(
+    "<div style='text-align:center;'>Created by <b>Pearlraj</b></div>",
+    unsafe_allow_html=True
+)
 
 # ---------------------------------------------------------------------------
 # HEADER
@@ -166,7 +170,7 @@ if filtered_df.empty:
 st.markdown(
     """
     <div class="dashboard-header">
-        <h1>🍔 Online Food Delivery Analysis Dashboard</h1>
+        <h1>🔍 Online Food Delivery Analysis Dashboard</h1>
         <p>End-to-end view of orders, revenue, delivery performance and customer satisfaction</p>
     </div>
     """,
